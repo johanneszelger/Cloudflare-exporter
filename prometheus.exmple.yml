@@ -1,0 +1,10 @@
+global:
+  scrape_interval: 60s
+  evaluation_interval: 60s
+
+scrape_configs:
+  - job_name: 'cloudflare'
+    static_configs:
+      - targets: ['cloudflare-exporter:9199']
+    scrape_interval: 60s
+    scrape_timeout: 30s
